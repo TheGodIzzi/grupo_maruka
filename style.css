@@ -10,7 +10,7 @@ body {
 .portada {
   text-align: center;
   padding: 80px 20px 60px;
-  background-color: #1e1e1e;
+  background-color: #000;
 }
 
 .portada h1 {
@@ -71,4 +71,12 @@ h2 {
   text-align: center;
   padding-top: 20px;
   color: #d4af37;
+}
+p span#total {
+  color: #d4af37; /* Cambia el número (total) a dorado, por ejemplo */
+}
+
+p {
+  text-align: center;
+  color: #000; /* Cambia aquí el color de la palabra "Total:" si lo deseas */
 }
