@@ -64,9 +64,19 @@ body {
 #carrito {
   list-style: none;
   padding: 0 20px;
+  color: #000000;
 }
 
 h2 {
   text-align: center;
   padding-top: 20px;
+  color: #d4af37;
+p span#total {
+  color: #d4af37;
+}
+  p {
+    text-aling: center;
+    color: #000000;
+
+  }
 }
