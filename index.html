@@ -1,33 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grupo Maruka</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 70px; /* Altura de la barra fija */
+    }
+
+    /* Barra superior fija */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #111; /* Negro o gris oscuro */
+      color: gold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .navbar .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar .buttons button {
+      background: none;
+      border: none;
+      color: gold;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .navbar .buttons button:hover {
+      color: white;
+    }
+
+    .contenido {
+      padding: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer h3 {
+      margin: 10px 0;
+      color: gold;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
-  <div class="portada">
-    <h1>Grupo Maruka</h1>
-    <p>Comercializando confianza, entregando calidad.</p>
+
+  <!-- Barra superior -->
+  <nav class="navbar">
+    <a href="#inicio" onclick="scrollToTop()">Grupo Maruka</a>
+    <div class="buttons">
+      <button title="Iniciar sesión">👤</button>
+      <button title="Carrito">🛒</button>
+      <button title="Menú">☰</button>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="contenido">
+    <h1 id="inicio">Bienvenido a Grupo Maruka</h1>
+    <p>Aquí puedes poner la información de productos, preventa, etc.</p>
+    <p style="height: 1000px;">Contenido largo para probar el scroll...</p>
   </div>
 
-  <div class="productos">
-    <div class="producto">
-      <h2>Producto 1</h2>
-      <p>$50.00</p>
-      <button onclick="agregarProducto('Producto 1', 50)">Agregar</button>
-    </div>
-    <div class="producto">
-      <h2>Producto 2</h2>
-      <p>$75.00</p>
-      <button onclick="agregarProducto('Producto 2', 75)">Agregar</button>
-    </div>
-  </div>
+  <!-- Pie de página -->
+  <footer>
+    <h3>Contacto</h3>
+    <p>Teléfono: 771 123 4567</p>
+    <p>Correo: contacto@grupomaruka.com</p>
+    <p>Dirección: Pachuca, Hidalgo</p>
+  </footer>
 
-  <h2>Tu preventa:</h2>
-  <ul id="carrito"></ul>
-  <p>Total: $<span id="total">0</span></p>
+  <!-- Script para volver al inicio -->
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 
-  <script src="script.js"></script>
 </body>
 </html>
