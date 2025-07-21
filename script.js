@@ -1,19 +1,72 @@
-let total = 0;
-const carrito = [];
-
-function agregarProducto(nombre, precio) {
-  carrito.push({ nombre, precio });
-  total += precio;
-  actualizarCarrito();
+/* Fondo bitono y estilos generales */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #1e1e1e 50%, #f7f7f7 50%);
+  color: #fff;
 }
 
-function actualizarCarrito() {
-  const lista = document.getElementById("carrito");
-  lista.innerHTML = "";
-  carrito.forEach(p => {
-    const li = document.createElement("li");
-    li.textContent = `${p.nombre} - $${p.precio}`;
-    lista.appendChild(li);
-  });
-  document.getElementById("total").textContent = total;
+/* Sección principal */
+.portada {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background-color: #1e1e1e;
+}
+
+.portada h1 {
+  font-size: 3em;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.portada p {
+  font-size: 1.2em;
+  color: #f0f0f0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Productos */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+  color: #000;
+}
+
+.producto {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px #ccc;
+  text-align: center;
+}
+
+.producto button {
+  background-color: #d4af37;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.producto button:hover {
+  background-color: #b89c2e;
+}
+
+/* Preventa */
+#carrito {
+  list-style: none;
+  padding: 0 20px;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 20px;
 }
