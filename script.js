@@ -17,3 +17,4 @@ function actualizarCarrito() {
   });
   document.getElementById("total").textContent = total;
 }
+//hola//
