@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, #1e1e1e 50%, #f7f7f7 50%);
+  background: linear-gradient(180deg, #fff 25%, #1e1e1e 75%);
   color: #fff;
 }
 
