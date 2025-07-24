@@ -3,14 +3,14 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(180deg, #fff 25%, #1e1e1e 75%);
-  color: #fff;
+  color: #F0E68C;
 }
 
 /* Sección principal */
 .portada {
   text-align: center;
   padding: 80px 20px 60px;
-  background-color: #d4af37;
+  background-color: #F0E68C;
 }
 
 .portada h1 {
